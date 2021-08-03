@@ -195,7 +195,8 @@ main {
   @include container;
 }
 
-.introduction__list {
+.introduction__list,
+.how-to-call__list {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -203,7 +204,8 @@ main {
   font-size: 14px;
 }
 
-.introduction__list__item {
+.introduction__list__item,
+.how-to-call__list__item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,11 +217,13 @@ main {
   transition: .4s;
 }
 
-.introduction__list__item+.introduction__list__item {
+.introduction__list__item+.introduction__list__item,
+.how-to-call__list__item+.how-to-call__list__item {
   margin-top: 1rem;
 }
 
-.introduction__list__item__icon {
+.introduction__list__item__icon,
+.how-to-call__list__item__icon {
   width: 100px;
   height: 100px;
   background-color: var(--dark);
@@ -227,17 +231,20 @@ main {
   transition: .2s;
 }
 
-.introduction__list__item:hover {
+.introduction__list__item:hover,
+.how-to-call__list__item:hover {
   transform: scale(1.025);
   box-shadow: 0 2px 8px var(--default);
   cursor: pointer;
 
-  .introduction__list__item__icon {
+  .introduction__list__item__icon,
+  .how-to-call__list__item__icon {
     transform: scale(1.1);
   }
 }
 
-.introduction__list__item--button-like {
+.introduction__list__item--button-like,
+.how-to-call__list__item--button-like {
   width: 200px;
   height: 40px;
   margin: 1rem auto;
@@ -250,7 +257,8 @@ main {
   line-height: 40px;
 }
 
-.introduction__list__item--description {
+.introduction__list__item--description,
+.how-to-call__list__item--description {
   letter-spacing: .1rem;
   color: var(--dark);
 }
@@ -283,29 +291,37 @@ main {
     font-size: 42px;
   }
 
-  .introduction__list {
+  .introduction__list,
+  .how-to-call__list {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .introduction__list__item {
+  .introduction__list__item,
+  .how-to-call__list__item {
     background-color: #fff;
     flex: 1;
   }
 
-  .introduction__list__item+.introduction__list__item {
+  .introduction__list__item+.introduction__list__item,
+  .how-to-call__list__item+.how-to-call__list__item {
     margin-top: 0;
     margin-left: 1rem;
   }
 
-  .introduction__list__item--button-like {
+  .introduction__list__item--button-like,
+  .how-to-call__list__item--button-like {
+    width: auto;
+    margin-bottom: 0;
+    
     font-size: 1.25rem;
     
     background-color: transparent;
     color: var(--primary);
   }
 
-  .introduction__list__item:hover {
+  .introduction__list__item:hover,
+  .how-to-call__list__item:hover {
     background-color: var(--light);
   }
 }
