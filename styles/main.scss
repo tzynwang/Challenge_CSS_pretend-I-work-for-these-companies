@@ -25,9 +25,25 @@
   transition: .2s;
 }
 
-// body {
-//   overflow-y: hidden;
-// }
+@mixin button ($border-color, $color, $bg-color, $hover-color, $hover-bg-color) {
+  display: inline-block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 50px;
+  
+  border: 1px solid $border-color;
+
+  color: $color;
+  background-color: $bg-color;
+  font-family: inherit;
+  transition: .3s;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+    cursor: pointer;
+  }
+}
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
@@ -190,7 +206,6 @@ main {
 .introduction,
 .how-to-call,
 .application,
-.news-and-QA,
 .feedback {
   @include container;
 }
@@ -308,41 +323,14 @@ main {
   }
 
   .application--button {
-    color: #fff;
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    transition: .3s;
-
-    &:hover {
-      color: var(--primary);
-      background-color: transparent;
-      cursor: pointer;
-    }
+    @include button(var(--primary), #fff, var(--primary), var(--primary), transparent);
   }
 }
 
 .application__text__item.app {
   .application--button {
-    color: var(--primary);
-    background-color: transparent;
-    border: 1px solid var(--primary);
-    transition: .3s;
-
-    &:hover {
-      color: #fff;
-      background-color: var(--primary);
-      cursor: pointer;
-    }
+    @include button(var(--primary), var(--primary), transparent, #fff, var(--primary));
   }
-}
-
-.application--button {
-  display: inline-block;
-  margin: 1.5rem auto;
-  width: 200px;
-  height: 50px;
-
-  font-family: inherit;
 }
 
 .application--button.dynamic-text::before {
@@ -363,6 +351,28 @@ main {
     object-fit: cover;
     object-position: center center;
   }
+}
+
+.news-and-QA__news,
+.news-and-QA__QA {
+  @include container;
+  padding-bottom: 2rem;
+}
+
+.news-and-QA__news__list__item {
+  margin: .5rem 0;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.news-and-QA--button {
+  @include button(var(--primary), var(--primary), transparent, #fff, var(--primary));
+  display: block;
+}
+
+.news-and-QA__hr {
+  margin: 2rem auto;
+  border-top: 1px solid var(--light-accent);
 }
 
 @media screen and (min-width: 768px) {
@@ -463,5 +473,42 @@ main {
 
   .application__image {
     width: clamp(200px, 40vw, 50%);
+  }
+
+  .news-and-QA {
+    display: flex;
+    justify-content: center;
+  }
+
+  .news-and-QA__hr {
+    display: none;
+  }
+
+  .news-and-QA__news,
+  .news-and-QA__QA {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .news-and-QA__QA {
+    position: relative;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      width: 50%;
+      height: 100%;
+
+      background: linear-gradient(to right, #fff, transparent), url('../images/pexels-erik-mclean-4157094.jpg');
+      background-size: cover;
+    }
   }
 }

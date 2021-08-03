@@ -221,7 +221,6 @@ main {
 .introduction,
 .how-to-call,
 .application,
-.news-and-QA,
 .feedback {
   width: 100%;
   padding: 0 5%;
@@ -361,9 +360,14 @@ main {
 }
 
 .application__text__item.qr .application--button {
+  display: inline-block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--primary);
   color: #fff;
   background-color: var(--primary);
-  border: 1px solid var(--primary);
+  font-family: inherit;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -375,9 +379,14 @@ main {
 }
 
 .application__text__item.app .application--button {
+  display: inline-block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--primary);
   color: var(--primary);
   background-color: transparent;
-  border: 1px solid var(--primary);
+  font-family: inherit;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -386,14 +395,6 @@ main {
   color: #fff;
   background-color: var(--primary);
   cursor: pointer;
-}
-
-.application--button {
-  display: inline-block;
-  margin: 1.5rem auto;
-  width: 200px;
-  height: 50px;
-  font-family: inherit;
 }
 
 .application--button.dynamic-text::before {
@@ -416,6 +417,44 @@ main {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.news-and-QA__news,
+.news-and-QA__QA {
+  width: 100%;
+  padding: 0 5%;
+  padding-bottom: 2rem;
+}
+
+.news-and-QA__news__list__item {
+  margin: .5rem 0;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+.news-and-QA--button {
+  display: inline-block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  font-family: inherit;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: block;
+}
+
+.news-and-QA--button:hover {
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.news-and-QA__hr {
+  margin: 2rem auto;
+  border-top: 1px solid var(--light-accent);
 }
 
 @media screen and (min-width: 768px) {
@@ -516,6 +555,48 @@ main {
   }
   .application__image {
     width: clamp(200px, 40vw, 50%);
+  }
+  .news-and-QA {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .news-and-QA__hr {
+    display: none;
+  }
+  .news-and-QA__news,
+  .news-and-QA__QA {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .news-and-QA__QA {
+    position: relative;
+  }
+  .news-and-QA__QA::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#fff), to(transparent)), url("../images/pexels-erik-mclean-4157094.jpg");
+    background: linear-gradient(to right, #fff, transparent), url("../images/pexels-erik-mclean-4157094.jpg");
+    background-size: cover;
   }
 }
 /*# sourceMappingURL=main.css.map */
