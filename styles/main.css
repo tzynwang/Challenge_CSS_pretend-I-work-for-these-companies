@@ -457,6 +457,35 @@ main {
   border-top: 1px solid var(--light-accent);
 }
 
+.feedback {
+  padding: 2rem 5%;
+  background-color: var(--light);
+}
+
+.feedback__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.feedback--avatar {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.feedback-name {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: var(--primary);
+}
+
 @media screen and (min-width: 768px) {
   .header__nav-icon--label {
     display: none;
@@ -597,6 +626,21 @@ main {
     background: -webkit-gradient(linear, left top, right top, from(#fff), to(transparent)), url("../images/pexels-erik-mclean-4157094.jpg");
     background: linear-gradient(to right, #fff, transparent), url("../images/pexels-erik-mclean-4157094.jpg");
     background-size: cover;
+  }
+  .feedback__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .feedback__list__item {
+    margin-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 15px;
+  }
+  .feedback__list__item + .feedback__list__item {
+    margin-left: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
