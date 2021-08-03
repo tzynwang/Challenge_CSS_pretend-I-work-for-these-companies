@@ -458,7 +458,7 @@ main {
 }
 
 .feedback {
-  padding: 2rem 5%;
+  padding: 2rem 5% 6rem;
   background-color: var(--light);
 }
 
@@ -484,6 +484,76 @@ main {
   display: inline-block;
   margin-bottom: .5rem;
   color: var(--primary);
+}
+
+footer {
+  padding: 2rem 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: var(--dark-accent);
+  color: var(--light);
+}
+
+footer .contact-info,
+footer .qr-code {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+footer .social-media,
+footer .service {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer .social-media .footer__section__list li,
+footer .service .footer__section__list li {
+  margin: .5rem 0;
+  font-size: 14px;
+}
+
+footer .social-media .footer__section__list a,
+footer .service .footer__section__list a {
+  color: var(--light);
+}
+
+footer .contact-info {
+  margin-bottom: 2rem;
+}
+
+footer .footer__section__title {
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+footer .footer__section__btn button {
+  display: inline-block;
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  font-family: inherit;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: block;
+  margin: 2rem auto;
+}
+
+footer .footer__section__btn button:hover {
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+footer .qr-code .footer__section__title,
+footer .qr-code .footer__section__image {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -641,6 +711,33 @@ main {
   }
   .feedback__list__item + .feedback__list__item {
     margin-left: 1rem;
+  }
+  footer .contact-info,
+  footer .social-media,
+  footer .service,
+  footer .qr-code {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  footer .contact-info {
+    -webkit-box-flex: 1.5;
+        -ms-flex-positive: 1.5;
+            flex-grow: 1.5;
+  }
+  footer .qr-code .footer__section__title,
+  footer .qr-code .footer__section__image {
+    display: block;
+    margin: 0 auto .5rem;
+    text-align: center;
+  }
+  footer .qr-code .footer__section__image {
+    width: 100px;
+    height: 100px;
+    background-color: var(--light);
+  }
+  footer .qr-code .footer__section__btn {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
