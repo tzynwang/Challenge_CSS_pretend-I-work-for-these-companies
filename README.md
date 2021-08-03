@@ -1,1 +1,2 @@
-# Challenge_CSS_pretent-I-work-for-these-companies
+# 試著切切看那些感覺很棒的公司的網站
+如題，這個repo會上傳一些企業網站的CSS切版練習結果
