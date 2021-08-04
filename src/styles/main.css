@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Loop&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,200 @@
           box-sizing: border-box;
 }
 
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: lightcoral;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  padding: 2rem 5% 1rem;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.f-family-zen {
+  font-family: 'Zen Loop', cursive;
+}
+
+.CCComic {
+  background-color: #b35b5b;
+  color: #fffffe;
+}
+
+.CCMagazine {
+  background-color: #d8d66e;
+}
+
+.CCStudio {
+  background-color: #92e699;
+}
+
+.CCCosmos {
+  background-color: #4b4b4b;
+  color: #fffffe;
+}
+
+.TheFoxes {
+  background-color: #be49db;
+  color: #fffffe;
+}
+
+.back-to-top {
+  position: absolute;
+  right: calc(1rem + 36px);
+  bottom: 1rem;
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 99;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nav li {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.nav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.landing {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0.75))), url("../images/pexels-atypeek-dgn-7532578.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../images/pexels-atypeek-dgn-7532578.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+
+.landing-title {
+  margin-bottom: 1rem;
+  font-size: 60px;
+}
+
+.landing-title,
+.landing-sub-title {
+  padding: 0 10%;
+}
+
+.landing-text {
+  width: 80%;
+  margin: 1rem auto 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.section-title {
+  padding-bottom: 1rem;
+  font-size: 48px;
+}
+
+.job-list-item {
+  padding-bottom: 1rem;
+}
+
+.job-title {
+  padding: 1rem 0;
+  font-size: 24px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fffffe;
+}
+
+.footer-title {
+  font-size: 24px;
+}
+
+.footer-logo {
+  position: relative;
+  margin: 1rem auto 2rem;
+  width: 400px;
+  height: 260px;
+  text-align: center;
+  line-height: 260px;
+  font-size: 56px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.footer-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/pexels-gabriele-brancati-7017325.jpg");
+  background-size: cover;
+  background-position: 50% 40%;
+  opacity: 0.5;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.footer-logo:hover::after {
+  opacity: 1;
+}
+
+.footer-copyright {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-title,
+  .landing-sub-title {
+    padding: unset;
+    text-align: center;
+  }
+  .landing-text {
+    width: clamp(23ch, 50%, 46ch);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 /*# sourceMappingURL=main.css.map */

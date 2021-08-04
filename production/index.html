@@ -1,1 +1,62 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CCFOX Group Careers</title><link href="main.css" rel="stylesheet"></head><body><div id="app"><h1>{{message}}</h1></div><script defer="defer" src="bundle.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCFOX Group Careers</title>
+<link href="main.css" rel="stylesheet"></head>
+
+<body>
+  <div id="app">
+    <nav class="nav">
+      <ul>
+        <li v-for="(name, value) in jobs"
+        :key="value">
+          <a
+          :href="'#' + value"
+          :class="value"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- landing -->
+    <div class="container landing">
+      <h1 class="landing-title f-family-zen">CCFOX</br>Group</h1>
+      <h2 class="landing-sub-title f-family-zen">Finding Foxes in the Galaxy</h2>
+      <p class="landing-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae nunc pharetra,
+        tincidunt sem nec, pulvinar
+        tellus. Mauris commodo enim vel viverra mollis. Proin at risus sed est suscipit laoreet. Cras lacus erat,
+        porttitor sollicitudin justo in, venenatis feugiat nisi. Cras posuere aliquam dolor non ornare. In a mattis
+        nibh. Nunc non eros mattis, facilisis ex sed, luctus felis. Phasellus gravida vitae lacus id vehicula. Nullam
+        interdum elit sit amet lacus fringilla tincidunt. Fusce gravida tortor nec est porta, et ullamcorper ex
+        convallis. Vivamus fermentum nibh in purus dictum iaculis. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra.</p>
+    </div>
+
+    <!-- by group -->
+    <div v-for="(name, value) in jobs" :class="['container', value]" :id="value">
+      <h2 class="section-title f-family-zen">{{value}}</h2>
+      <!-- jobs -->
+      <ul v-if="recurring(name)">
+        <li v-for="n in name" class="job-list-item">
+          <a href="#">
+            <div class="job-title">{{ n | jobTitle}}</div>
+            <span>{{ n | jobLocation}}</span>
+          </a>
+        </li>
+      </ul>
+      <div v-else>Currently no open positions.</div>
+      <a href="#" class="back-to-top">Back to Top</a>
+    </div>
+
+    <footer class="footer container t-center">
+      <div class="footer-title">About Us</div>
+      <div class="footer-logo">CCFOX Group</div>
+      <div class="footer-copyright">Copyright © 2021 CCFOX Group, Inc. All rights reserved.</div>
+    </footer>
+  </div>
+<script defer src="bundle.js"></script></body>
+
+</html>

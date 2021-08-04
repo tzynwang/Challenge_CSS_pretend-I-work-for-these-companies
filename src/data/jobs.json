@@ -1,0 +1,38 @@
+{
+  "CCComic":[
+    {
+      "Product Marketing Manager":"Taipei / Marketing / Permanent"
+    },
+    {
+      "iOS Engineer":"Taipei / Engineering / Permanent"
+    }
+  ],
+  "CCMagazine":[
+    {
+      "Backend Engineer":"Taipei / Engineering / Permanent"
+    }
+  ],
+  "CCStudio":[
+    {
+      "Frontend Engineer":"Taipei / Engineering / Permanent"
+    },
+    {
+      "Backend Engineer":"Taipei / Engineering / Permanent"
+    },
+    {
+      "Software Architect":"Taipei / Engineering / Permanent"
+    }
+  ],
+  "CCCosmos":[],
+  "TheFoxes":[
+    {
+      "Frontend Engineer":"Taipei / Engineering / Permanent"
+    },
+    {
+      "Backend Engineer":"Taipei / Engineering / Permanent"
+    },
+    {
+      "Product Manager":"Taipei / Product Management / Permanent"
+    }
+  ]
+}

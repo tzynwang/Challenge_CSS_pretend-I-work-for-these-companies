@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tzynwang/Challenge_CSS_pretend-I-work-for-these-companies#readme",
   "devDependencies": {
+    "axios": "^0.21.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.1.0",
