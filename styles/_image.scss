@@ -1,3 +1,7 @@
 :root {
-  --call-service: url('../images/call.svg');
+  --call-service: url('../images/moon.svg');
+}
+
+[data-theme="dark"] {
+  --call-service: url('../images/sun.svg');
 }

@@ -1,5 +1,5 @@
 const headerCheckbox = document.querySelector('.header__nav-icon--checkbox')
-const modeSwitch = document.querySelector('.service-call')
+const modeSwitch = document.querySelector('#modeSwitch')
 
 // mobile nav-bar open/close
 headerCheckbox.addEventListener('change', event => {
@@ -11,6 +11,10 @@ headerCheckbox.addEventListener('change', event => {
 })
 
 // dark mode
-modeSwitch.addEventListener('click', () => {
-  document.documentElement.setAttribute('data-theme', 'dark')
+modeSwitch.addEventListener('change', event => {
+  if (event.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark')
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light')
+  }
 })
