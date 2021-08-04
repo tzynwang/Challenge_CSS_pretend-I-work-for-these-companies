@@ -1,0 +1,31 @@
+{
+  "name": "css-challenge_pretend-i-work-for-these-companies",
+  "version": "1.0.0",
+  "description": "如題，這個repo會上傳一些企業網站的CSS切版練習結果",
+  "main": "app.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzynwang/Challenge_CSS_pretend-I-work-for-these-companies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzynwang/Challenge_CSS_pretend-I-work-for-these-companies/issues"
+  },
+  "homepage": "https://github.com/tzynwang/Challenge_CSS_pretend-I-work-for-these-companies#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "vue": "^2.6.14",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
