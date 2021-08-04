@@ -12,7 +12,7 @@ const app = new Vue({
   },
   methods: {
     async fetchData () {
-      const response = await axios.get('../src/data/jobs.json')
+      const response = await axios.get('./src/data/jobs.json')
       this.jobs = { ...response.data }
     },
     getJobs (group) {
